@@ -3,7 +3,8 @@ stylus.
 
 Most of the code is taken from
 http://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node-js
-with slight modifications.
+
+The author left some of the code out of his post and there have been some updates that make some of it outdated. Also, he uses sass for css while this implementation uses Stylus.
 
 Make sure you have CouchDB installed and running (this app assumes it is running on
 the default port - 5984)
