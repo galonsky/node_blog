@@ -1,0 +1,9 @@
+Very basic blogging platform implemented on node using express, jade, and
+stylus.
+
+Most of the code is taken from
+http://www.ianwootten.co.uk/2011/02/07/blog-rolling-with-couchdb-express-and-node-js
+with slight modifications.
+
+Make sure you have CouchDB installed and running (this app assumes it running on
+the default port - 5984)
