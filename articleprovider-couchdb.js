@@ -5,22 +5,19 @@ ArticleProvider = function(host, port) {
     cache: true,
     raw: false
   });
-  this.db = this.connection.database('articles');
-  this.db.exists(function(error, result){
-    //Creates database and defines a basic view for articles if the database
-    //doesn't exist
-    if (!result){
-      this.db.create();
-      this.db.save('_design/articles', {
-        all: {
-          map: function (doc) {
-            emit(doc.name, doc);
-          }
-        }
 
-      });
-    }
-  });
+  this.db = this.connection.database('articles');
+  this.db.create();
+  this.db.save('_design/articles', {
+      all: {
+        map: function (doc) {
+          emit(doc.name, doc);
+        }
+      }
+
+    });
+
+  
 };
 
 ArticleProvider.prototype.findAll = function(callback) {
