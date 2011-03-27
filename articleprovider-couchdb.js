@@ -14,7 +14,7 @@ ArticleProvider = function(host, port) {
       this.db.save('_design/articles', {
         all: {
           map: function (doc) {
-            emit(doc.name, doc);
+            if (doc.title){ emit(doc.title, doc)};
           }
         }
 
